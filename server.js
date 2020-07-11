@@ -3,7 +3,7 @@ const mysql = require("mysql");
 const connection = mysql.createConnection({
    host: "process.env.RDS_HOST",
    user: "process.env.RDS_USER",
-   password: "process.env.RDS_PASS",
+   password: "process.env.RDS_PASSWORD",
    database: "white_bear_app",
 });
 
