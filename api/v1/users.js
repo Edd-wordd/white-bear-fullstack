@@ -5,6 +5,10 @@ const db = require("../../db");
 const selectUser = require("../../queries/selectUser");
 const { toJson, toSafeParse } = require("../../utils/helpers");
 
+// @route   GET api/v1/users
+// @desc    Get a valid user via email and password
+// @address Public
+
 router.get("/", (req, res) => {
    db.query(selectUser("edward@gmail.com", "replace_me"))
       .then((dbRes) => {
