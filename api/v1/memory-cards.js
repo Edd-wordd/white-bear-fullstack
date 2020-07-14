@@ -9,15 +9,10 @@ const selectAllCards = require("../../queries/selectAllCards");
 // @address Public
 
 router.get("/", (req, res) => {
-   db.query(
-      selectAllCards(
-         "8c3ee2c4-d34d-4fe1-a438-e9ea9271c910",
-         "ven",
-         "`memory_cards`.`created_at` DESC"
-      )
-   )
+   console.log("request", req.query);
+   const { userId, searchTerm, order } = req.query;
+   db.query(selectAllCards(userId, searchTerm, order))
       .then((dbRes) => {
-         console.log(dbRes);
          res.json(dbRes);
       })
       .catch((err) => {
