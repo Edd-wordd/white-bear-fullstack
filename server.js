@@ -1,19 +1,9 @@
-require("dotenv").config();
-const mysql = require("mysql");
-const connection = mysql.createConnection({
-   host: "process.env.RDS_HOST",
-   user: "process.env.RDS_USER",
-   password: "process.env.RDS_PASSWORD",
-   database: "white_bear_app",
-});
+const express = require("express");
+const app = express();
 
-connection.connect();
+app.use("/api/v1/users", require("./api/v1/users"));
 
-connection.query("SELECT 1 + 1 AS solution", (error, results, fields) => {
-   if (error) {
-      console.log(error);
-   }
-   console.log("The solution is: ", results[0].solution);
-});
-
-connection.end();
+const port = process.env.PORT || 3045;
+app.listen(port, () =>
+   console.log(`server running at https://localHost:${port}`)
+);
