@@ -1,0 +1,48 @@
+const memoryCards = [
+   {
+      id: "b9189a4f-22e7-4f23-87ff-575515b4ecdf",
+      imagery: "weddings are necessary everyday for love",
+      answer: "wednesday",
+      userId: "8c3ee2c4-d34d-4fe1-a438-e9ea9271c910",
+      createdAt: 1591904638906,
+      nextAttemptAt: 1591904639553,
+      lastAttemptAt: 1591904640367,
+      totalSuccessfulAttempts: 0,
+      level: 1,
+   },
+   {
+      id: "d1a5e690-70d7-4836-85b2-e45f27edbb27",
+      imagery: "a glass full of crumbs",
+      answer: "fulcrum",
+      userId: "8c3ee2c4-d34d-4fe1-a438-e9ea9271c910",
+      createdAt: 1591902992562,
+      nextAttemptAt: 1591902994714,
+      lastAttemptAt: 1591902995358,
+      totalSuccessfulAttempts: 0,
+      level: 1,
+   },
+   {
+      id: "02c059a6-70c0-4057-a303-ef1cfb42b593",
+      imagery: "Heaven-Gate-Door-Tree-Sticks-Heaven-Bun",
+      answer: "784-3671",
+      userId: "77d9c8ec-f5d6-4d17-bd69-61cf347bfe55",
+      createdAt: 1591904522605,
+      nextAttemptAt: 1591904524325,
+      lastAttemptAt: 1591904525890,
+      totalSuccessfulAttempts: 7,
+      level: 1,
+   },
+   {
+      id: "35d7b7db-bb21-49ae-9a7e-988ca09f510b",
+      imagery: "dark dingy black hole in water",
+      answer: "obscure",
+      userId: "77d9c8ec-f5d6-4d17-bd69-61cf347bfe55",
+      createdAt: 1591904560146,
+      nextAttemptAt: 1591904561226,
+      lastAttemptAt: 1591904562009,
+      totalSuccessfulAttempts: 3,
+      level: 1,
+   },
+];
+
+export default memoryCards;

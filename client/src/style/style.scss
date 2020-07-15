@@ -1,0 +1,116 @@
+// background
+.background-image {
+   background-image: url("../img/background-landing.jpg");
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   background-attachment: fixed;
+   min-height: 100vh;
+}
+
+.btn-link {
+   padding-left: 0;
+   padding-right: 0;
+   font-weight: $font-weight-bold;
+   border: 0;
+}
+// designers font choice
+.text-brand {
+   font-family: $font-family-brand;
+}
+// adds middle bars between navagation buttons
+.tab-separator {
+   border-left: 1px $gray-800 solid;
+}
+// darkens button to make it active
+.tab-active {
+   background-color: $gray-800;
+}
+
+// Removes border from cards
+.card {
+   border: 0;
+   font-family: $font-family-serif;
+}
+
+// Adjusts the text color,font, and font size in cards
+.secondCard {
+   color: $white;
+   font-family: $font-family-serif;
+   font-size: $font-size-base;
+}
+// makes the top card bottom corners rounded
+.card.bg-primary {
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+}
+// makes the bottom card top corners pointed
+.card.bg-secondary {
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+}
+// removes bold from navagation text
+.btn-navigation {
+   font-weight: $font-weight-normal;
+}
+
+// LANDING PAGE EDITS
+
+// // adjusts white bear logo & name on background
+
+.topName {
+   position: absolute;
+   z-index: 10;
+   margin-top: map-get($spacers, 7);
+}
+
+// turns brand name to white and adjusts font to brand name
+#brandHeader {
+   color: $white;
+   font-size: $h1-font-size;
+   font-family: $font-family-brand;
+   font-weight: $font-weight-normal;
+}
+
+// moves landing cards down the page
+.landCards {
+   margin-top: 100px;
+}
+
+// adds style to buttons
+.landButton {
+   font-family: $font-family-sans-serif;
+}
+
+textarea {
+   background: transparent;
+}
+.card textarea {
+   color: $white;
+}
+.card.bg-primary textarea {
+   border: none;
+   overflow: auto;
+   outline: none;
+
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+
+   resize: none;
+}
+.bg-success,
+.bg-danger p.lead {
+   color: $white;
+}
+
+// removes the double dropdown icons from the select element
+.custom-select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.disabled {
+   pointer-events: fill !important;
+   cursor: not-allowed;
+}
