@@ -10,8 +10,21 @@ const selectAllCards = require("../../queries/selectAllCards");
 
 router.get("/", (req, res) => {
    console.log("request", req.query);
+
    const { userId, searchTerm, order } = req.query;
-   db.query(selectAllCards(userId, searchTerm, order))
+   let construcedSearchTerm;
+   if (searchTerm === "" || searchTerm === undefined) {
+      construcedSearchTerm = `%%`;
+   } else {
+      construcedSearchTerm = `%${searchTerm}%`;
+   }
+   //    https://www.npmjs.com/package/mysql#escaping-query-values
+   db.query(selectAllCards, [
+      userId,
+      construcedSearchTerm,
+      construcedSearchTerm,
+      order,
+   ])
       .then((dbRes) => {
          res.json(dbRes);
       })
