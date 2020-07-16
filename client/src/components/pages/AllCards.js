@@ -73,7 +73,7 @@ export default class AllCards extends React.Component {
             </div>
             <div className="row">
                <div className="col-6">
-                  <p className="text-danger">Sort cards by</p>
+                  <p>Sort cards by</p>
                </div>
 
                <div className="col-6">
