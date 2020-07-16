@@ -88,6 +88,7 @@ class SignUp extends React.Component {
          this.state.hasEmailError === false &&
          this.state.hasPasswordError === false
       ) {
+         // create user object
          const user = {
             id: getUuid(),
             email: emailInput,
@@ -95,24 +96,9 @@ class SignUp extends React.Component {
             createdOn: Date.now(),
          };
          console.log("created user object for POST", user);
-         axios
-            .get(
-               "https://raw.githubusercontent.com/Edd-wordd/white-bear-mpa/master/src/mock%20data/user.JSON"
-            )
-            .then((res) => {
-               // handle success
-               const currentUser = res.data;
-               console.log(currentUser);
-               this.props.dispatch({
-                  type: actions.UPDATE_CURRENT_USER,
-                  payload: res.data,
-               });
-            })
-            .catch((error) => {
-               // handle error
-               console.log(error);
-            });
-         this.props.history.push("/create-answer");
+         // post to API
+         // Update currentUser in global state with API response
+         // go to next page this.props.history.push("/create-answer");
       }
    }
    render() {
@@ -144,6 +130,10 @@ class SignUp extends React.Component {
                      )}
 
                      <label htmlFor="password">Create a password</label>
+
+                     <span className="text-muted ">
+                        Must be at least 9 characters.
+                     </span>
                      <input
                         type="password"
                         className={classnames({
