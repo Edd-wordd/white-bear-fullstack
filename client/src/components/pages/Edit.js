@@ -15,7 +15,6 @@ const memoryCard = memoryCards[2];
 class Edit extends React.Component {
    constructor(props) {
       super(props);
-      // console.timeLog("edwrd is here");
       this.state = {
          answerText: memoryCard.answer,
          imageryText: memoryCard.imagery,
